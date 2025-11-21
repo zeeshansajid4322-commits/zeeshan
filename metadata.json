@@ -1,0 +1,5 @@
+{
+  "name": "ChronoMind",
+  "description": "A versatile time tracking tool featuring a precision stopwatch, countdown timer, and AI-powered smart configuration using Gemini.",
+  "requestFramePermissions": []
+}
