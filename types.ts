@@ -1,23 +1,18 @@
-export enum Tab {
-  TIMER = 'TIMER',
-  STOPWATCH = 'STOPWATCH',
+export type Category = 'COFFEE' | 'JUICE' | 'DRINKS';
+
+export interface MenuItem {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+  category: Category;
+  tags?: string[];
 }
 
-export enum TimerStatus {
-  IDLE = 'IDLE',
-  RUNNING = 'RUNNING',
-  PAUSED = 'PAUSED',
-  COMPLETED = 'COMPLETED',
-}
-
-export interface SmartTimerResponse {
-  durationSeconds: number;
+export interface TabProps {
+  isActive: boolean;
+  onClick: () => void;
   label: string;
-  advice?: string;
-}
-
-export interface Lap {
-  id: number;
-  time: number; // in milliseconds
-  split: number; // difference from last lap
+  icon: React.ReactNode;
 }
